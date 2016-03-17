@@ -1,5 +1,7 @@
 package vn.chuonghd.xyzretail;
 
+import java.util.Iterator;
+
 /**
  * Created by huynhduychuong on 3/17/2016.
  */
@@ -36,6 +38,13 @@ public class Shopping {
 
         System.out.println("Sales Taxes: " + totalTax);
         System.out.println("Grand Total: " + builder.calculateTotal());
+
+        Iterator<Item> it = builder.getIterator();
+        ItemVisitor visitor = new GoodsLabellingVisitor ();
+        while (it.hasNext()) {
+            Item item = it.next();
+            item.accept(visitor);
+        }
     }
 }
 

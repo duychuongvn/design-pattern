@@ -20,6 +20,10 @@ public class Cosmetics extends Goods {
         return isImported;
     }
 
+    public void accept(ItemVisitor itemVisitor) {
+        itemVisitor.visit(this);
+    }
+
     public void setImported(boolean b) {
         isImported = b;
     }

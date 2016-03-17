@@ -22,4 +22,8 @@ public class Book extends Goods {
     public void setImported(boolean b) {
         isImported = b;
     }
+
+    public void accept(ItemVisitor itemVisitor) {
+        itemVisitor.visit(this);
+    }
 }

@@ -19,7 +19,9 @@ public class CD extends Goods {
     protected boolean isImported() {
         return this.isImported;
     }
-
+    public void accept(ItemVisitor itemVisitor) {
+        itemVisitor.visit(this);
+    }
     public void setImported(boolean isImported) {
         this.isImported = isImported;
     }
