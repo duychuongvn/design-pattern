@@ -1,4 +1,4 @@
-package vn.chuonghd.journaldev.singleton;
+package vn.chuonghd.journaldev.creationalpattern.singleton;
 
 import java.io.*;
 
