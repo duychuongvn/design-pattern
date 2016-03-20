@@ -45,6 +45,7 @@ public class Shopping {
             Item item = it.next();
             item.accept(visitor);
         }
+
     }
 }
 
