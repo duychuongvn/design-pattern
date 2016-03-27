@@ -7,9 +7,9 @@ import java.sql.Connection;
  */
 public class HelperFacade {
 
-    public static enum DBType {MYSQL, ORACLE}
+    public enum DBType {MYSQL, ORACLE}
 
-    public static enum ReportType {HTML, PDF}
+    public enum ReportType {HTML, PDF}
 
     public void generateReport(DBType dbType, ReportType reportType, String tableName) {
 
